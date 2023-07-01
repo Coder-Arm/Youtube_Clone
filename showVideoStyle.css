@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  color: white;
+}
+body {
+  background-color: #181818;
+}
+nav {
+  background-color: #212121;
+  display: flex;
+  justify-content: space-between;
+  height: 8vh;
+}
+nav .left {
+  margin-left: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+nav .center {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: 32vw;
+}
+.center .search {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background-color: #303030;
+  height: 6vh;
+  width: 90%;
+  border-radius: 2px;
+}
+.search button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.search input {
+  background-color: black;
+  border: none;
+  height: 5.7vh;
+  width: 88%;
+  margin-left: 1.4px;
+  padding-left: 4px;
+}
+.search input:focus {
+  outline: none;
+}
+.mic {
+  display: grid;
+  place-items: center;
+  padding: 6px;
+  background-color: black;
+  border-radius: 50%;
+}
+nav .right {
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.right img:last-child {
+  border-radius: 50%;
+}
+main {
+  display: flex;
+}
+section {
+  margin-top: 30px;
+  padding-left: 2rem;
+  width: 60vw;
+}
+#yt-video {
+  width: 100%;
+}
+.title-with-stats {
+  border-bottom: 2px solid rgba(211, 211, 211, 0.202);
+}
+.video-title {
+  font-size: 1.3em;
+  margin-bottom: 10px;
+}
+.statistics {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.statistics .right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-right: 20px;
+}
+.right .item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.views {
+  font-weight: 500;
+  opacity: 0.9;
+}
+.channel {
+  margin-top: 20px;
+}
+
+.channel-name {
+  font-weight: 500;
+}
+.channel-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.subscribe {
+  background-color: red;
+  border: none;
+  border-radius: 4px;
+  padding: 8px;
+}
+.description {
+  margin-top: 30px;
+}
+.commentsBox {
+  margin-top: 20px;
+}
+.comments-top {
+  font-size: 1.8em;
+}
+.comments {
+  padding: 10px;
+}
+.comment-item {
+  display: flex;
+  gap: 10px;
+}
+.comment-item button {
+  cursor: pointer;
+}
+#side-videos {
+  margin: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+#side-videos .video-card {
+  width: 25vw;
+  display: flex;
+  gap: 20px;
+}
+.video-card:hover {
+  cursor: pointer;
+}
+.video-card img {
+  width: 50%;
+}
+.title {
+  font-weight: 300;
+}
+.channel-name {
+  margin-top: 10px;
+  font-weight: 300;
+  opacity: 0.8;
+}

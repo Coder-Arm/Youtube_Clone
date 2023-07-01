@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="showVideoStyle.css" />
+    <title>Video</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="left">
+          <img src="./Navigations/hamburger.png" alt="menu" />
+          <img src="./Navigations/Youtube-Logo.png" alt="Youtube-Logo" />
+        </div>
+        <div class="center">
+          <div class="search">
+            <input type="text" placeholder="Search" />
+            <button><img src="./Navigations/search.png" alt="search" /></button>
+          </div>
+          <div class="mic">
+            <img src="./Navigations/mic.png" alt="mic" />
+          </div>
+        </div>
+        <div class="right">
+          <img src="./Navigations/create.png" alt="create-videos" />
+          <img src="./Navigations/apps.png" alt="apps" />
+          <img src="./Navigations/notifications.png" alt="notifications" />
+          <img src="./Navigations/User-Avatar.png" alt="profile" />
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <iframe id="yt-video" width="750" height="400" src=""></iframe>
+        <div id="video-info"></div>
+      </section>
+      <aside id="side-videos"></aside>
+    </main>
+    <script>
+      console.clear();
+    </script>
+    <script src="./showVideo.js"></script>
+  </body>
+</html>

@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+}
+nav {
+  background-color: #212121;
+  display: flex;
+  justify-content: space-between;
+  height: 8vh;
+}
+nav .left {
+  margin-left: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+nav .center {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: 32vw;
+}
+.center .search {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background-color: #303030;
+  height: 6vh;
+  width: 90%;
+  border-radius: 2px;
+}
+.search button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.search input {
+  background-color: black;
+  border: none;
+  height: 5.7vh;
+  width: 88%;
+  margin-left: 1.4px;
+  padding-left: 4px;
+  color: white;
+}
+.search input:focus {
+  outline: none;
+}
+.mic {
+  display: grid;
+  place-items: center;
+  padding: 6px;
+  background-color: black;
+  border-radius: 50%;
+}
+nav .right {
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.right img:last-child {
+  border-radius: 50%;
+}
+
+main {
+  display: flex;
+  background-color: black;
+}
+.sidebar {
+  width: 25vw;
+  flex-direction: column;
+  background-color: #212121;
+}
+.sidebar span {
+  color: white;
+}
+.sidebar .box:not(:last-child) {
+  border-bottom: 1px solid rgba(211, 211, 211, 0.174);
+}
+.sidebar .top {
+  color: white;
+  font-weight: 600;
+  opacity: 0.9;
+  padding: 10px;
+}
+.sidebar .item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 10px;
+}
+.sidebar .item:hover {
+  background-color: rgb(92, 92, 92);
+  cursor: pointer;
+}
+.sidebar .avatar img {
+  border-radius: 50%;
+}
+.container-top {
+  border-top: 1px solid rgba(211, 211, 211, 0.275);
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  background-color: #212121;
+  height: 8vh;
+}
+.container-top .all {
+  background-color: white;
+  border-radius: 10px;
+  padding: 5px 15px;
+  font-size: 16px;
+}
+.container-top .item {
+  padding: 5px 15px;
+  font-size: 16px;
+  color: white;
+  background-color: #303030;
+  border-radius: 10px;
+}
+#container {
+  display: grid;
+  grid-template-columns: repeat(4, 240px);
+  gap: 20px;
+  margin: 0 20px;
+}
+
+.video-card {
+  width: 100%;
+  color: white;
+}
+a {
+  text-decoration: none;
+}
+.video-img img {
+  width: 100%;
+}
+.video-title {
+  font-weight: 600;
+}
+.channel-name {
+  opacity: 0.9;
+}
