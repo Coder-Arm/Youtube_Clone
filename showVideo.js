@@ -79,7 +79,7 @@ function getVideos(data){
          videoCard.className = "video-card";
          videoCard.addEventListener("click",()=>{
             localStorage.setItem("videoId",item.id.videoId);
-            window.open("./videoDetails.html");
+            window.open("https://coder-arm.github.io/Youtube_Clone/videoDetails.html");
             video.src = `https://www.youtube.com/embed/${videoId}`;
          })
          videoCard.innerHTML = `
