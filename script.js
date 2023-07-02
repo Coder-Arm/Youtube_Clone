@@ -1,11 +1,11 @@
 
 let searchStr = "ncs";
-const apiKey = "AIzaSyDlS51VfwD02QVgM1QltgAUZvQoTxa1KrQ";
+const apiKey = "AIzaSyBxo8JwdPalNYmabeOeeF5lW3YdfwcPtM8";
 const endpoint = `https://www.googleapis.com/youtube/v3/search?key=${apiKey}&q=${searchStr}&part=snippet&type=video&maxResults=20`;
 
 const container = document.getElementById("container");
 function renderVideos(data){
-    data.forEach(item => {
+    data.forEach((item) => {
         const videoLink = document.createElement("a");
         videoLink.href = "./videoDetails.html"
         videoLink.addEventListener("click",()=>{

@@ -1,7 +1,7 @@
 const video = document.getElementById("yt-video");
 const videoId = localStorage.getItem("videoId");
 video.src = `https://www.youtube.com/embed/${videoId}`;
-const apiKey = "AIzaSyDlS51VfwD02QVgM1QltgAUZvQoTxa1KrQ";
+const apiKey = "AIzaSyBxo8JwdPalNYmabeOeeF5lW3YdfwcPtM8";
 const endpoint1 = `https://www.googleapis.com/youtube/v3/videos?part=snippet,contentDetails,statistics&id=${videoId}&key=${apiKey}
 `
 const videoInfo = document.getElementById("video-info"); 
