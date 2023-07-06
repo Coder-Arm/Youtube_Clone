@@ -131,14 +131,32 @@ section {
 .comments-top {
   font-size: 1.8em;
 }
-.comments {
+.comment {
   padding: 10px;
 }
 .comment-item {
   display: flex;
   gap: 10px;
+  align-items: center;
+  margin: 20px 0;
+}
+.comment-item img {
+  width: 30px;
+  border-radius: 50%;
+}
+.comment-bottom {
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 .comment-item button {
+  background-color: transparent;
+  border: none;
+  font-size: 18px;
+}
+.comment-item button:hover {
+  color: rgb(73, 73, 253);
   cursor: pointer;
 }
 #side-videos {
