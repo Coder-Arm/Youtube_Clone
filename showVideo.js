@@ -5,6 +5,7 @@ const apiKey = "AIzaSyBxo8JwdPalNYmabeOeeF5lW3YdfwcPtM8";
 const endpoint1 = `https://www.googleapis.com/youtube/v3/videos?part=snippet,contentDetails,statistics&id=${videoId}&key=${apiKey}
 `
 const videoInfo = document.getElementById("video-info"); 
+
 function renderData(item){
         const titleWithStats = document.createElement("div");
         titleWithStats.className = "title-with-stats";
@@ -32,7 +33,7 @@ function renderData(item){
         videoInfo.append(titleWithStats,channel);
 
 }
-   
+   //Fetching onclicked video
 async function fetchVideoDetails(){
     const response = await fetch(endpoint1);
     const result = await response.json();
@@ -46,8 +47,16 @@ const endpoint2 = `https://www.googleapis.com/youtube/v3/commentThreads
   const commentsContainer = document.createElement("div");
   commentsContainer.className = "commentsBox"
   
+  async function fetchComments(){
+    const response = await fetch(endpoint2);
+    const result = await response.json();
+     console.log(result.items);
+      addComments(result.items);
+  }
+  fetchComments();
+
  function addComments(data){
-    commentsContainer.innerHTML = `<div cla ss="comments-top"><span>${data.length} </span>Comments</div>`
+    commentsContainer.innerHTML = `<div class="comments-top"><span>${data.length} </span>Comments</div>`
     data.forEach(item => {
         commentsContainer.innerHTML += `<div class="comment-item"><img src= ${item.snippet.topLevelComment.snippet.authorProfileImageUrl} alt="profile-img"><div><p class="comment">${item.snippet.topLevelComment.snippet.textDisplay}</p>
         <div class ="comment-bottom">
@@ -61,16 +70,9 @@ const endpoint2 = `https://www.googleapis.com/youtube/v3/commentThreads
     videoInfo.appendChild(commentsContainer);
  }
 
-async function fetchComments(){
-  const response = await fetch(endpoint2);
-  const result = await response.json();
-   console.log(result.items);
-    addComments(result.items);
-}
-fetchComments();
-
 const searchStr = "";
 const endpoint3 = `https://www.googleapis.com/youtube/v3/search?key=${apiKey}&q=${searchStr}&part=snippet&type=video&maxResults=10` 
+
 async function fetchVideos(){
     const response = await fetch(endpoint3);
     const result = await response.json();

@@ -3,8 +3,21 @@
   padding: 0;
   font-family: "Inter", sans-serif;
 }
+html{
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar{
+  width: 12px;
+}
+::-webkit-scrollbar-track{
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb{
+  background-color: grey;
+  border-radius: 10px;
+}
 nav {
-  background-color: #212121;
+  background-color: black;
   display: flex;
   justify-content: space-between;
   height: 8vh;
@@ -19,12 +32,12 @@ nav .center {
   display: flex;
   align-items: center;
   gap: 5px;
-  width: 32vw;
+  width: 35vw;
 }
 .center .search {
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 8px;
   background-color: #303030;
   height: 6vh;
   width: 90%;
@@ -41,7 +54,7 @@ nav .center {
   height: 5.7vh;
   width: 88%;
   margin-left: 1.4px;
-  padding-left: 4px;
+  padding-left: 8px;
   color: white;
 }
 .search input:focus {
@@ -51,8 +64,9 @@ nav .center {
   display: grid;
   place-items: center;
   padding: 6px;
-  background-color: black;
+  background-color: #3D3D3D;
   border-radius: 50%;
+  margin-left: 20px;
 }
 nav .right {
   margin-right: 15px;
@@ -69,9 +83,9 @@ main {
   background-color: black;
 }
 .sidebar {
-  width: 25vw;
+  width: 15vw;
   flex-direction: column;
-  background-color: #212121;
+  background-color: black;
 }
 .sidebar span {
   color: white;
@@ -98,14 +112,22 @@ main {
 .sidebar .avatar img {
   border-radius: 50%;
 }
+.main{
+  width: 100%;
+}
 .container-top {
   border-top: 1px solid rgba(211, 211, 211, 0.275);
   padding-left: 20px;
   display: flex;
   align-items: center;
   gap: 30px;
-  background-color: #212121;
+  background-color: black;
   height: 8vh;
+  overflow: auto;
+}
+
+.container-top::-webkit-scrollbar{
+height: 5px;
 }
 .container-top .all {
   background-color: white;
@@ -122,24 +144,37 @@ main {
 }
 #container {
   display: grid;
-  grid-template-columns: repeat(4, 240px);
-  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 30px;
   margin: 0 20px;
 }
 
 .video-card {
   width: 100%;
+  height: 360px;
   color: white;
 }
 a {
   text-decoration: none;
 }
-.video-img img {
-  width: 100%;
+
+.video-img{
+  width: 100%; 
+  border-radius: 8px;
 }
 .video-title {
   font-weight: 600;
 }
 .channel-name {
-  opacity: 0.9;
+  font-size: 0.9em;
+  opacity: 0.8;
+}
+@media (max-width : 880px) {
+  .sidebar{
+    display: none;
+  }
+  .container-top,#container{
+    width: 100vw;
+  }
+
 }
