@@ -9,6 +9,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+    <link rel="shortcut icon" href="../Navigations/yt-logo.png" type="image/x-icon">
     <link rel="stylesheet" href="showVideoStyle.css" />
     <title>Video</title>
   </head>
@@ -16,29 +17,29 @@
     <header>
       <nav>
         <div class="left">
-          <img src="./Navigations/hamburger.png" alt="menu" />
-          <img src="./Navigations/Youtube-Logo.png" alt="Youtube-Logo" />
+          <div class="go-home">
+          <img class="yt-logo" src="../Navigations/yt-logo.png" alt="Youtube-Logo" />
+          <span class="logo-name">Youtopia</span>
+          </div>
         </div>
         <div class="center">
           <div class="search">
-            <input type="text" placeholder="Search" />
-            <button><img src="./Navigations/search.png" alt="search" /></button>
+            <input id="searchInput" type="text" placeholder="Search" />
+            <img src="../Navigations/search.png" alt="search" />
           </div>
           <div class="mic">
-            <img src="./Navigations/mic.png" alt="mic" />
+            <img src="../Navigations/mic.png" alt="mic" />
           </div>
         </div>
         <div class="right">
-          <img src="./Navigations/create.png" alt="create-videos" />
-          <img src="./Navigations/apps.png" alt="apps" />
-          <img src="./Navigations/notifications.png" alt="notifications" />
-          <img src="./Navigations/User-Avatar.png" alt="profile" />
+          <img src="" alt="profile" />
         </div>
       </nav>
+
     </header>
     <main>
       <section>
-        <iframe id="yt-video" width="750" height="400" src=""></iframe>
+        <iframe id="yt-video" src=""></iframe>
         <div id="video-info"></div>
       </section>
       <aside id="side-videos"></aside>
